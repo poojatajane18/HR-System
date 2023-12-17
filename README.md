@@ -51,12 +51,12 @@ This project implements a Human Resources Management System in Java. It includes
   - Methods:
     - `login(String username, String password)`: Checks if the provided username and password match the user's credentials.
 
-Usage
+Usage : 
 Instantiate objects of the Employee, SalesRep, and SalesManager classes.
 Set values for the properties.
 Test the implemented methods.
 
-Challenge
+Challenge : 
 Turn the HR system into a login system.
 Implement the User interface for all employees.
 Use the login method to verify usernames and passwords.
