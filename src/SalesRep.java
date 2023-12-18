@@ -11,5 +11,5 @@ public class SalesRep extends Employee {
 	      // comission = 0.1 * salesMade
 		return (int)(0.1*salesMade);
 	   }
-
+	
 }

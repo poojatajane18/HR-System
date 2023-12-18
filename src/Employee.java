@@ -21,9 +21,7 @@ public class Employee implements User {
 		daysWorked=dWorked;
 		vacationDaysTaken=vacDaysTaken;
 		salary=sal;
-		yearsWorked=yWorked;
-		
-		
+		yearsWorked=yWorked;	
 	}
 
 	@Override
@@ -45,6 +43,17 @@ public class Employee implements User {
 	}
 	
 	//method
+	public void EmployeeDetails(){
+        //TODO implement
+		System.out.println("Emplyee Details : ");
+    	System.out.println("Name : "+firstName+" "+lastName);
+    	System.out.println("Registration No. : "+registration);
+    	System.out.println("Age : "+age);
+    	System.out.println("Days Of Worked : "+daysWorked);
+    	System.out.println("vacation Days Taken : "+vacationDaysTaken);
+    	System.out.println("Salary : "+salary);
+    	System.out.println("Years Worked : "+yearsWorked);
+     }
 	public int timeToRetirement(){
 	      // time to retirement = min(60 - age, 40 - yearsWorked)
 		return Math.min(60 - age, 40 - yearsWorked);

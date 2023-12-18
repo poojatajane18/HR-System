@@ -2,18 +2,20 @@ import java.util.HashMap;
 
 public class SalesManager extends Employee{
 	
-	HashMap<Integer, SalesRep> salesTeam;
+	HashMap<Integer, SalesRep> salesTeam = new HashMap<Integer,SalesRep>(); 
 
-	SalesManager(String fName, String lName, int reg, int ageE, int dWorked, int vacDaysTaken, double sal, int yWorked,
-			String uName, String pass,HashMap<Integer, SalesRep> sTeam) {
+	SalesManager(String fName, String lName, int reg, int ageE, int dWorked, int vacDaysTaken, double sal, int yWorked,HashMap<Integer, SalesRep> ssleTeam) {
 		super(fName, lName, reg, ageE, dWorked, vacDaysTaken, sal, yWorked);
 		// TODO Auto-generated constructor stub
-		salesTeam = sTeam;
+		this.salesTeam = salesTeam;
 	}
-	  public void calculateComission(){
-	      // 0.03 * all sales made by team
-		  /*double totalSales = salesTeam.values().stream().mapToDouble(SalesRep::getSalesMade).sum();
-	       double commision = 0.03 * totalSales;*/
- 
-	   }
+		
+	public double calculateCommission() {
+        double totalCommission = 0.0;
+        for (SalesRep salesRep : salesTeam.values()) {
+            totalCommission += salesRep.calculateComission();
+        }
+        return 0.03 * totalCommission;
+    }
+	
 }
